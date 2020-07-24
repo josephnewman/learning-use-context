@@ -17,8 +17,8 @@ function AddToShoppingList() {
 
   return (
     <div className="add-to-shopping-list">
-      <form onSubmit={handleSubmit}>
-        <input value={newItem} onChange={(e) => setNewItem(e.target.value)} />
+      <form className="add-to-shopping-list-form" onSubmit={handleSubmit}>
+        <input className="item-input" type="text" value={newItem} onChange={(e) => setNewItem(e.target.value)} />
         <button>Add</button>
       </form>
     </div>

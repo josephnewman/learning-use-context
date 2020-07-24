@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ShoppingListContext = React.createContext([{}, () => {}]);
+const ShoppingListContext = React.createContext([{}, {}]);
 
 const ShoppingListProvider = (props) => {
   const [shoppingList, setShoppingList] = useState([
