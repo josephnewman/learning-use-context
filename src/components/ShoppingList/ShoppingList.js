@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { ShoppingListContext } from '../../context/ShoppingListContext';
+import { useShoppingListContext } from '../../context/ShoppingListContext';
 
 function ShoppingList() {
-  const [shoppingList] = useContext(ShoppingListContext);
+  const { shoppingList } = useShoppingListContext();
 
   return (
     <div className="shopping-list">

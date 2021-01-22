@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
-const ShoppingListContext = React.createContext([{}, {}]);
+const ShoppingListContext = React.createContext({});
 
-const ShoppingListProvider = (props) => {
+const ShoppingListProvider = ({ children }) => {
   const [shoppingList, setShoppingList] = useState([
     'The most beautiful eggs',
     'Just a touch of oil',
@@ -11,10 +11,10 @@ const ShoppingListProvider = (props) => {
   ]);
 
   return (
-    <ShoppingListContext.Provider value={[shoppingList, setShoppingList]}>
-      {props.children}
-    </ShoppingListContext.Provider>
+    <ShoppingListContext.Provider value={{ shoppingList, setShoppingList }}>{children}</ShoppingListContext.Provider>
   );
 };
 
-export { ShoppingListContext, ShoppingListProvider };
+const useShoppingListContext = () => useContext(ShoppingListContext);
+
+export { useShoppingListContext, ShoppingListProvider };

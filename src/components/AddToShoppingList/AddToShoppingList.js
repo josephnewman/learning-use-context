@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 
-import { ShoppingListContext } from '../../context/ShoppingListContext';
+import { useShoppingListContext } from '../../context/ShoppingListContext';
 
 function AddToShoppingList() {
-  const [shoppingList, setShoppingList] = useContext(ShoppingListContext);
+  const { shoppingList, setShoppingList } = useShoppingListContext();
   const [newItem, setNewItem] = useState('');
 
   const handleSubmit = (e) => {

@@ -1,17 +1,13 @@
 import React from 'react';
-import * as allOfReact from 'react';
 import { mount } from 'enzyme';
 import AddToShoppingList from './AddToShoppingList';
+import { mockShoppingListContext } from '../../../test/TestUtils';
 
 describe('AddToShoppingList', () => {
+  const { setShoppingListMock } = mockShoppingListContext(['hey', 'there']);
   let wrapper;
-  let setShoppingListMock;
 
   beforeEach(() => {
-    setShoppingListMock = jest.fn();
-
-    jest.spyOn(allOfReact, 'useContext').mockImplementation(() => [['hey', 'there'], setShoppingListMock]);
-
     wrapper = mount(<AddToShoppingList />);
   });
 
