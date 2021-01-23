@@ -1,10 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 import ShoppingList from './ShoppingList';
 import { mockShoppingListContext } from '../../../test/TestUtils';
 
 describe('ShoppingList', () => {
-  let wrapper;
+  let wrapper: ReactWrapper;
 
   beforeEach(() => {
     mockShoppingListContext(['hey', 'there']);

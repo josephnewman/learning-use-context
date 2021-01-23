@@ -1,11 +1,11 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 import AddToShoppingList from './AddToShoppingList';
 import { mockShoppingListContext } from '../../../test/TestUtils';
 
 describe('AddToShoppingList', () => {
   const { setShoppingListMock } = mockShoppingListContext(['hey', 'there']);
-  let wrapper;
+  let wrapper: ReactWrapper;
 
   beforeEach(() => {
     wrapper = mount(<AddToShoppingList />);

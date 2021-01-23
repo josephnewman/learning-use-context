@@ -6,7 +6,7 @@ function AddToShoppingList() {
   const { shoppingList, setShoppingList } = useShoppingListContext();
   const [newItem, setNewItem] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (newItem) {
       const newShoppingList = [...shoppingList, newItem];
