@@ -1,8 +1,8 @@
 import React from 'react';
-import { ShoppingList, AddToShoppingList } from '../';
+import { ShoppingList, AddToShoppingList } from '..';
 import { ShoppingListProvider } from '../../context/ShoppingListContext';
 
-function Page() {
+const Page = (): JSX.Element => {
   return (
     <div className="page">
       <ShoppingListProvider>

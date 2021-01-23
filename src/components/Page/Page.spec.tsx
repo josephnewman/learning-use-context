@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 import Page from './Page';
 
 describe('Page', () => {
-  let wrapper;
+  let wrapper: ReactWrapper;
 
   beforeEach(() => {
     wrapper = mount(<Page />);
