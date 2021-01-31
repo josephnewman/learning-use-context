@@ -48,8 +48,8 @@
       "!**/node_modules/**",
       "!**/coverage/**",
       "!**/react-app-env.d.ts",
-      "!**/serviceWorker.js",
-      "!**/index.js",
+      "!**/serviceWorker.ts",
+      "!**/index.ts",
       "!src/index.tsx"
     ]
   },
